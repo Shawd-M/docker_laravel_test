@@ -23,8 +23,8 @@ RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Ajouter user laravel
-RUN useradd -G www-data,root -u 1000 -d /home/kim kim
-RUN mkdir -p /home/kim/.composer && \
-    chown -R kim:kim /home/kim
+RUN useradd -G www-data,root -u 1000 -d /home/joseph_d joseph
+RUN mkdir -p /home/joseph_d/.composer && \
+    chown -R joseph_d:joseph /home/joseph_D
 
-USER kim
+USER joseph
